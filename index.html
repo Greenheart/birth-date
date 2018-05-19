@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Birth Date</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="challenge.css" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <h1>Welcome!</h1>
+            <section id="app"></section>
+
+            <footer>
+                <p>My solution is using Jasmine for testing and Moment.js to handle dates.</p>
+                <p>
+                    The modern web is full of useful features to create basic applications.
+                    Common frameworks and libraries provide great structure (and should be used)
+                    for larger projects, but as a hobby, I like to explore the limits of the platform itself.
+                </p>
+                <p>
+                    By better understanding the constraints modern tools work with behind the scenes,
+                    they are both easier to use &mdash; and improve.
+                </p>
+                <div class="actions">
+                    <a href="https://github.com/Greenheart/birth-date">Code on GitHub</a>
+                    <button id="run-tests">Run Tests</button>
+                </div>
+                <small>See results in the developer console.</small>
+            </footer>
+        </main>
+
+        <template id="birth-date-template">
+            <form class="birth-date">
+                <label for="birth-date-input">When were you born?</label>
+                <div data-placeholder>
+                    <input type="text" name="birth-date-input" class="birth-date-input" tabindex="1" autofocus autocomplete="off" required>
+                </div>
+                <span class="validation-message"></span>
+                <input type="submit" class="continue" value="Continue" tabindex="2">
+            </form>
+        </template>
+
+        <!-- A hidden container used for component tests. -->
+        <section id="test" style="opacity: 0; position: absolute; left: -99999px; top: 0;"></section>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
+        <script src="challenge.js"></script>
+
+        <!-- Test runner -->
+        <script src="jasmine/jasmine.js"></script>
+        <script src="jasmine/boot.js"></script>
+    </body>
+</html>
